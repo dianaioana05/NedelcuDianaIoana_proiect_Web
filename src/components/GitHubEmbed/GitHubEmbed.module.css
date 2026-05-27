@@ -1,0 +1,254 @@
+.section {
+  padding: 6rem 2rem;
+  background: #0a0a0a;
+  border-top: 1px solid #1e1e1e;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sectionLabel {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f0ece4;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #7a736a;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Search ── */
+.searchForm {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.inputWrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 0.85rem;
+  color: #5a5248;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #f0ece4;
+  font-size: 0.9rem;
+  font-family: 'Arial', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input:focus {
+  border-color: #c9a84c;
+}
+
+.searchBtn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: 1px solid #c9a84c;
+  color: #c9a84c;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.searchBtn:hover {
+  background: #c9a84c;
+  color: #0a0a0a;
+}
+
+/* ── Feed ── */
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid #1e1e1e;
+}
+
+.commitRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #1e1e1e;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  gap: 1rem;
+}
+
+.commitRow:last-child {
+  border-bottom: none;
+}
+
+.commitRow:hover {
+  background: #161616;
+}
+
+.commitLeft {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.commitIcon {
+  color: #c9a84c;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.commitInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.commitMessage {
+  font-size: 0.9rem;
+  color: #d0c8be;
+  font-family: 'Arial', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.commitRepo {
+  font-size: 0.75rem;
+  color: #5a5248;
+  font-family: monospace;
+}
+
+.commitRight {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.commitDate {
+  font-size: 0.78rem;
+  color: #5a5248;
+  font-family: 'Arial', sans-serif;
+  white-space: nowrap;
+}
+
+.externalIcon {
+  color: #3a3530;
+  transition: color 0.2s;
+}
+
+.commitRow:hover .externalIcon {
+  color: #c9a84c;
+}
+
+/* ── Status box ── */
+.statusBox {
+  padding: 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  color: #7a736a;
+  font-family: 'Arial', sans-serif;
+  border: 1px solid #1e1e1e;
+}
+
+.errorText {
+  color: #c9a84c;
+  font-size: 0.95rem;
+}
+
+.hintText {
+  font-size: 0.85rem;
+  color: #5a5248;
+}
+
+.hintText strong {
+  color: #c9a84c;
+}
+
+.spinnerIcon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Profile link ── */
+.profileLink {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.viewProfile {
+  font-size: 0.85rem;
+  color: #c9a84c;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.viewProfile:hover {
+  border-bottom-color: #c9a84c;
+}
+
+@media (max-width: 580px) {
+  .sectionTitle {
+    font-size: 2rem;
+  }
+
+  .searchForm {
+    flex-direction: column;
+  }
+}

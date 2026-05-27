@@ -1,0 +1,293 @@
+.section {
+  padding: 6rem 2rem;
+  background: #111111;
+  border-top: 1px solid #1e1e1e;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Section header ── */
+.sectionLabel {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  color: #f0ece4;
+  margin-bottom: 0.5rem;
+}
+
+.sectionSubtitle {
+  text-align: center;
+  color: #7a736a;
+  font-family: 'Arial', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+/* ── Carousel ── */
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.track {
+  flex: 1;
+  overflow: hidden;
+}
+
+.strip {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Card ── */
+.card {
+  flex: 0 0 calc(100% / 3);
+  box-sizing: border-box;
+  padding: 0.6rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-top: 3px solid #333;
+  transition: border-top-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-top-color: var(--accent, #c9a84c);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+  transform: translateY(-3px);
+}
+
+.cardActive {
+  border-top-color: var(--accent, #c9a84c);
+  box-shadow: 0 0 30px rgba(201,168,76,0.1);
+}
+
+/* ── Diploma image ── */
+.cardImage {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  background: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diplomaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .diplomaImg {
+  transform: scale(1.03);
+}
+
+.diplomaFallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1e1530, #2a1f3d);
+}
+
+/* ── Card body ── */
+.cardBody {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  background: #222;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.date {
+  font-size: 0.75rem;
+  color: #5a5248;
+  font-family: 'Arial', sans-serif;
+  text-align: right;
+}
+
+.cardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f0ece4;
+  line-height: 1.3;
+}
+
+.cardSubtitle {
+  font-size: 0.85rem;
+  color: var(--accent, #c9a84c);
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+}
+
+.cardLocation {
+  font-size: 0.78rem;
+  color: #5a5248;
+  font-family: 'Arial', sans-serif;
+}
+
+.cardHint {
+  font-size: 0.72rem;
+  color: #3a3530;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0.4rem;
+  transition: color 0.3s;
+}
+
+.card:hover .cardHint {
+  color: var(--accent, #c9a84c);
+}
+
+/* ── Nav buttons ── */
+.navBtn {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  color: #7a736a;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.navBtn:hover {
+  border-color: #c9a84c;
+  color: #c9a84c;
+}
+
+/* ── Dots ── */
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2a2a2a;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dotActive {
+  background: #c9a84c;
+  transform: scale(1.3);
+}
+
+/* ── CV Download ── */
+.cvSection {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cvDivider {
+  width: 60px;
+  height: 1px;
+  background: #2a2a2a;
+  margin-bottom: 0.5rem;
+}
+
+.cvLabel {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #5a5248;
+  font-family: 'Arial', sans-serif;
+}
+
+.cvBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.5rem;
+  background: #c9a84c;
+  color: #0a0a0a;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: 'Arial', sans-serif;
+  transition: background 0.3s, transform 0.2s;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+
+.cvBtn:hover {
+  background: #f0d080;
+  transform: translateY(-2px);
+}
+
+.cvHint {
+  font-size: 0.78rem;
+  color: #3a3530;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 100%;
+  }
+
+  .strip {
+    transition: transform 0.4s ease;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
