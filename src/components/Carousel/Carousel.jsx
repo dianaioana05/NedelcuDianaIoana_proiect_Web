@@ -6,7 +6,7 @@ import styles from './Carousel.module.css'
 const diplomas = [
   {
     id: 1,
-    image: '/diploma1.jpeg',
+    image: './diploma1.jpeg',
     title: 'Diplomă 1',
     subtitle: 'Dans Sportiv',
     date: '2026',
@@ -18,7 +18,7 @@ const diplomas = [
   },
   {
     id: 2,
-    image: '/diploma2.jpeg',
+    image: './diploma2.jpeg',
     title: 'Diplomă 2',
     subtitle: 'Dans Sportiv',
     date: '2026',
@@ -30,7 +30,7 @@ const diplomas = [
   },
   {
     id: 3,
-    image: '/diploma3.jpeg',
+    image: './diploma3.jpeg',
     title: 'Diplomă 3',
     subtitle: 'Dans Sportiv',
     date: '2026',
@@ -42,7 +42,7 @@ const diplomas = [
   },
   {
     id: 4,
-    image: '/diploma4.jpeg',
+    image: './diploma4.jpeg',
     title: 'Diplomă 4',
     subtitle: 'Dans Sportiv',
     date: '2026',
@@ -54,7 +54,7 @@ const diplomas = [
   },
   {
     id: 5,
-    image: '/diploma5.jpeg',
+    image: './diploma5.jpeg',
     title: 'Diplomă 5',
     subtitle: 'Dans Sportiv',
     date: '2026',
@@ -181,7 +181,7 @@ function CVDownload() {
     <div className={styles.cvSection}>
       <div className={styles.cvDivider} />
       <p className={styles.cvLabel}>Descarcă CV-ul meu</p>
-      <a href="/cv.pdf" download="cv.pdf" className={styles.cvBtn}>
+      <a href="./cv.pdf" download="cv.pdf" className={styles.cvBtn}>
         <BookOpen size={18} strokeWidth={1.5} />
         Download CV
       </a>

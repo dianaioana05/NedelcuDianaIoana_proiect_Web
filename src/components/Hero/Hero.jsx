@@ -19,7 +19,7 @@ function Hero() {
         <div className={styles.photoRing}>
           <div className={styles.photoInner}>
             <img
-              src="/logo.jpeg"
+              src="./logo.jpeg"
               alt="Diana Nedelcu"
               className={styles.photo}
               onError={(e) => { e.target.style.display = 'none' }}
